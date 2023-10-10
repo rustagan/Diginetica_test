@@ -1,0 +1,112 @@
+/* Default Styles */
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* inter-regular - cyrillic-ext_latin */
+// @font-face {
+//     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//     font-family: 'Inter';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('../fonts/inter-v13-cyrillic-ext_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+//   }
+//   /* inter-500 - cyrillic-ext_latin */
+//   @font-face {
+//     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//     font-family: 'Inter';
+//     font-style: normal;
+//     font-weight: 500;
+//     src: url('../fonts/inter-v13-cyrillic-ext_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+//   }
+
+$--color-font-main:#333333;
+$--color-font-hover: #125BAE;
+$--color-font-second: #AAAAAA;
+$--color-font-bg: #E2EFFF;
+$--color-brand: #7397F5;
+
+/* Header */ 
+@import "./components/header.scss";
+/* Products */
+@import "./components/products.scss";
+/* Filters */
+@import "./components/filter.scss";
+
+
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    scrollbar-color: #CBCBCB #ffffff; 
+    scrollbar-width: 3px;
+}
+
+.container {
+    max-width: 1820px;
+    margin: 0px auto;
+    padding: 0px 50px;
+}
+
+button {
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+// скроллбар
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 10px #CBCBCB;
+}
+
+@media (max-width:1440px) {
+    .container {
+        max-width: 1340px;
+    }
+ }
+
+ @media (max-width:1200px) {
+    .container {
+        max-width: 1100px;
+    }
+
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 882px;
+        padding: 0px 0px;
+    } 
+}
+@media (max-width:767px) {
+    .container {
+        max-width: none;
+        padding: 0px 16px;
+    } 
+}
+
+@media (max-width:425px) {
+    header {
+        .container {
+            padding: 0;
+        }
+    }
+
+}
+
+
+
+

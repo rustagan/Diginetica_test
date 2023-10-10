@@ -1,0 +1,254 @@
+.filter {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+// фильтр категорий
+.category-filter {
+    .category-filter__names {
+        list-style-type:none;
+        padding-left: 0;
+        margin-bottom: 28px;
+        .category-filter__name, .category-filter__sub-name{
+            padding: 7px 16px 7px 8px;
+            display: flex;
+            border-radius: 5px;
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: $--color-font-main;
+            }
+            a:hover {
+                color: $--color-brand;
+            }
+            .category-filter__counter {
+                font-size: 12px;
+                color: $--color-font-second;
+                margin-left: auto;
+            }
+            .category-filter__counter_active {
+                color: $--color-font-main;
+            }
+        }
+        .category-filter__sub-name {
+            padding-left: 32px;
+        }
+        .category-filter__name_active {
+            background-color: $--color-font-bg;
+        }
+    }
+}
+
+// фильтр цены
+.price-filter {
+    display: flex;
+    flex-direction: column;
+
+    .price-filter__header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        color: $--color-font-main;
+        font-size: 16px;
+    }
+    .price-filter__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+        .price-filter__input-min {
+            display: flex;
+            align-items: center;
+            width: 42.5%;
+            border: 1px solid $--color-font-second;
+            border-radius: 4px;
+            padding: 10px 8px;
+            .price-filter__min {
+                border: none;
+                font-family: 'Inter';
+                font-size: 14px;
+                outline: none;
+                color: $--color-font-main;
+                width: 46px;
+            }
+        }
+        .price-filter__divider {
+            width: 10px;
+            border-bottom: 1px solid;
+            border-color: $--color-font-second;
+        }
+        .price-filter__input-max {
+            display: flex;
+            align-items: center;
+            width: 42.5%;
+            border: 1px solid $--color-font-second;
+            border-radius: 4px;
+            padding: 10px 8px;
+            .price-filter__max {
+                width: 100%;
+                border: none;
+                font-family: 'Inter';
+                font-size: 14px;
+                outline: none;
+                color: $--color-font-main;
+                width: 46px;
+            }
+        }
+        .price-filter__span {
+            font-size: 12px;
+            color: $--color-font-second;
+            margin-right: 6px;
+        }
+    }
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+//фильтр бренда
+.brand-filter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .brand-filter__header-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        .brand-filter__header {
+            color: $--color-font-main;
+            font-size: 16px;
+        }
+        .brand-filter__clear-btn {
+            color: $--color-font-second;
+            background-color: white;
+            font-size: 12px;
+            border: none;
+            width: 48px;
+            padding: 0;
+            text-decoration: underline;
+        }
+        .brand-filter__clear-btn:hover {
+            color: $--color-font-main;
+        }
+    }
+    #brand__search {
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        border: 1px solid $--color-font-second;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 16px;
+        .search__img {
+            width: 16px;
+            margin-right: 8px;
+        }
+        .search__input {
+            border: none;
+            font-family: 'Inter';
+            font-size: 14px;
+            outline: none;
+        }
+        .search__brand-reset-btn {
+            opacity: 0;
+            background: url("/assets/img/cleanbtn.svg");
+            border: none;
+            width: 17px;
+            height: 17px;
+        }
+        .search__input:valid ~ button[type="reset"] {
+            opacity: 0.4;
+        }
+    }
+    #brand__search:focus-within {
+        border: 1px solid $--color-brand;
+    }
+}
+
+// Стили аттрибутов фильтров
+.filter__list {
+    list-style-type:none;
+    padding-left: 0;
+    max-height: 180px;
+    overflow: auto;
+    .filter__attribute {
+        display: flex;
+        align-items: center;
+        padding-right: 16px;
+        margin-bottom: 12px;
+        .filter__check {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            margin-right: 12px;
+
+        }
+        .filter__attribute-name {
+            font-size: 14px;
+            color: $--color-font-main;
+        }
+        .filter__counter {
+            font-size: 12px;
+            color: $--color-font-second;
+            margin-left: auto;
+        }
+    }
+}
+.filter__attribute:last-child{
+    margin-bottom: 0;
+}
+
+// чекбоксы
+.filter__check+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+.filter__check+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $--color-font-second;
+    border-radius: 3px;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.filter__check:checked+label::before {
+    border-color: $--color-brand;
+    background-color: $--color-brand;
+    background-image: url("/assets/img/chekbox.svg");
+}
+.filter__check:not(:disabled):not(:checked)+label:hover::before {
+    border-color: $--color-brand;
+}
+
+
+// фильтр размера
+.size-filter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    .brand-filter__header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        color: $--color-font-main;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:425px) {
+    .filter {
+        display: none;
+    }
+}
