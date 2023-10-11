@@ -157,6 +157,7 @@ input[type="number"]::-webkit-outer-spin-button {
         .search__brand-reset-btn {
             opacity: 0;
             background: url("/assets/img/cleanbtn.svg");
+            background-repeat: no-repeat;
             border: none;
             width: 17px;
             height: 17px;
@@ -227,6 +228,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-color: $--color-brand;
     background-color: $--color-brand;
     background-image: url("/assets/img/chekbox.svg");
+    background-repeat: no-repeat;
 }
 .filter__check:not(:disabled):not(:checked)+label:hover::before {
     border-color: $--color-brand;
