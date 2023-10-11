@@ -164,6 +164,7 @@ header {
                 .search__back-mobile-btn {
                     display: block;
                     background: url("/assets/img/backarrow.svg");
+                    background-repeat: no-repeat;
                     border: none;
                     width: 20px;
                     height: 20px;
@@ -178,6 +179,7 @@ header {
                 }
                 .search__reset-mobile-btn {
                     background: url("/assets/img/cleanbtn.svg");
+                    background-repeat: no-repeat;
                     border: none;
                     width: 17px;
                     height: 17px;
